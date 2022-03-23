@@ -11,23 +11,22 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using NotepadPlusPlus.ViewModels;
 
 namespace NotepadPlusPlus.Views
 {
     /// <summary>
-    /// Interaction logic for AboutWindow.xaml
+    /// Interaction logic for ReplaceWindow.xaml
     /// </summary>
-    public partial class AboutWindow : Window
+    public partial class ReplaceWindow : Window
     {
-        public AboutWindow()
+        public ReplaceWindow()
         {
             InitializeComponent();
+            DataContext = new ReplaceViewModel();
         }
-        private void LinkRequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
-        }
-        private void OkButtonClick(object sender, RoutedEventArgs e)
+
+        private void ReplaceButtonClick(object sender, RoutedEventArgs e)
         {
             Close();
         }

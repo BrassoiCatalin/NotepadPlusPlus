@@ -7,7 +7,11 @@
         xmlns:models="clr-namespace:NotepadPlusPlus.Models"
         d:DataContext="{d:DesignInstance Type=viewModels:MainTabItemsViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="NotepadPlusPlus" 
+        Height="500" 
+        Width="900" 
+        WindowState="Maximized" 
+        SizeToContent="Manual">
     <Grid>
         <Menu VerticalAlignment="Top">
             <MenuItem Header="File">
@@ -19,18 +23,23 @@
                         Command="{Binding SaveCommand}"/>
               <MenuItem Header="Save As..."
                         Command="{Binding SaveAsCommand}"/>
-              <MenuItem Header="Exit"/>
+              <MenuItem Header="Exit"
+                        Command="{Binding ExitProgramCommand}"/>
             </MenuItem>
             <MenuItem Header="Search">
-              <MenuItem Header="Find..."/>
-              <MenuItem Header="Replace"/>
-              <MenuItem Header="Replace All..."/>
+              <MenuItem Header="Find..."
+                        Command="{Binding FindCommand}"/>
+              <MenuItem Header="Replace"
+                        Command="{Binding ReplaceCommand}"/>
+              <MenuItem Header="Replace All..."
+                        Command="{Binding ReplaceAllCommand}"/>
             </MenuItem>
+          <MenuItem Header="Delete File"
+                    Command="{Binding CloseFileCommand}"/>
             <MenuItem Header="Help">
-              <MenuItem Header="About" Command="{Binding AboutCommand}"/>
+              <MenuItem Header="About" 
+                        Command="{Binding AboutCommand}"/>
             </MenuItem>
-            <MenuItem Header="Delete File"
-                      Command="{Binding CloseFileCommand}"/>
         </Menu>
         <TabControl x:Name="MainTabControl"
                   ItemsSource="{Binding Items}"

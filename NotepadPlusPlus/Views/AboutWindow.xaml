@@ -16,13 +16,13 @@
     </Grid.RowDefinitions>
 
     <StackPanel x:Name="stackPanel">
-      <TextBlock x:Name="studentName" 
+      <TextBlock Text="Numele: Brassoi Catalin-Florin" 
                  FontSize="30">
       </TextBlock>
-      <TextBlock x:Name="studentGroup" 
+      <TextBlock Text="Grupa: 10LF301"
                  FontSize="15">
       </TextBlock>
-      <TextBlock x:Name="linkName" 
+      <TextBlock Text="Adresa GitHub:" 
                  FontSize="15">
       </TextBlock>
             <TextBlock FontSize="15">

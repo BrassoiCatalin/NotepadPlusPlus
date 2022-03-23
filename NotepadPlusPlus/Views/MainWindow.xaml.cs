@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using NotepadPlusPlus.Helper;
 using NotepadPlusPlus.ViewModels;
+using NotepadPlusPlus.Views;
 
 namespace NotepadPlusPlus.Views
 {
