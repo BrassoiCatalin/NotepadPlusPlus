@@ -7,26 +7,25 @@
         xmlns:viewModels="clr-namespace:NotepadPlusPlus.ViewModels"
         d:DataContext="{d:DesignInstance Type=viewModels:FindViewModel}"
         mc:Ignorable="d"
-        Title="FindWindow" Height="190" Width="450" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <TextBox Text="{Binding FindValue}"
-                 Width="200"
-                 Height="20"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center">
-        </TextBox>
-        <Label Content="Input a value to search: " 
+        Title="FindWindow" SizeToContent="WidthAndHeight"  WindowStartupLocation="CenterScreen">
+    <StackPanel Margin="10">
+      <Label Content="Input a value to search: " 
+             HorizontalAlignment="Center"
+             VerticalAlignment="Top" Margin="5">
+      </Label>
+        <TextBox Margin="5" Text="{Binding FindValue}"
+               Width="200"
+               Height="20"
                HorizontalAlignment="Center"
-               VerticalAlignment="Top"
-               Height="40">
-        </Label>
-        <Button Content="Search"
-                Height="20"
-                Width="55"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Center"
-                Click="SearchButtonClick"
-                >
+               VerticalAlignment="Center">
+        </TextBox>
+        <Button Margin="5" Content="Search"
+              Height="20"
+              Width="55"
+              VerticalAlignment="Bottom"
+              HorizontalAlignment="Center"
+              Click="SearchButtonClick"
+      >
         </Button>
-    </Grid>
+    </StackPanel>
 </Window>

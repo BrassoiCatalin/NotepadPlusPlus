@@ -7,36 +7,51 @@
         xmlns:viewModels="clr-namespace:NotepadPlusPlus.ViewModels"
         d:DataContext="{d:DesignInstance Type=viewModels:ReplaceAllViewModel}"
         mc:Ignorable="d"
-        Title="ReplaceAllWindow" Height="190" Width="450" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <TextBox Text="{Binding ValueToBeReplaced}"
-               Width="200"
-               Height="20"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Top"
-               Margin="70,4,0,0">
-      </TextBox>
-      <Label Content="Input a value to replace: " 
-             HorizontalAlignment="Left"
-             VerticalAlignment="Top"
-             Height="40">
-      </Label>
-        <TextBox Text="{Binding NewValue}"
-                 Width="200"
-                 Height="20"
-                 HorizontalAlignment="Center"
-                 Margin="70,0,0,70">
-        </TextBox>
-        <Label Content="The new value:"
-               HorizontalAlignment="Left"
-               Margin="0,32,0,0">
-        </Label>
-      <Button Content="Replace"
+        Title="Replace All" 
+        SizeToContent="WidthAndHeight" 
+        WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Input a value to replace: " 
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Width="150"
+                 Height="30"
+                 Margin="5">
+            </Label>
+            <TextBox Text="{Binding ValueToBeReplaced}"
+                   Margin="5,10,5,5"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Height="20"
+                   Width="150">
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="The new value:"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="5"
+                 Height="30"
+                 Width="150">
+            </Label>
+            <TextBox Text="{Binding NewValue}"
+                   Margin="5,10,5,5"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Height="20"
+                   Width="150">
+            </TextBox>
+        </StackPanel>
+
+        <Button Margin ="0,20,0,20" 
+              Content="Replace"
               Height="20"
               Width="55"
               VerticalAlignment="Bottom"
               HorizontalAlignment="Center"
               Click="ReplaceAllButtonClick">
-      </Button>
-    </Grid>
+        </Button>
+    </StackPanel>
 </Window>
